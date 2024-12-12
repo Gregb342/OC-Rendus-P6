@@ -121,4 +121,11 @@ AND productId = 2
 AND versionId = 1
 AND creationDate BETWEEN '2023-01-01' AND '2023-08-01'
 AND problem LIKE '%application%' 
-AND problem LIKE '%message%';
+AND problem LIKE '%message%'
+
+-- création d'un type table utilisateur pour gérer la liste des mots clés 
+CREATE TYPE KeywordList AS TABLE (
+    Keyword NVARCHAR(255) NOT NULL
+);
+GO
+
